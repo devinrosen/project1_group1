@@ -1,0 +1,6 @@
+Django==4.2.6
+djangorestframework==3.14.0
+fredapi==0.5.1
+hvplot==0.9.0
+pandas==2.1.1
+yfinance==0.2.31
