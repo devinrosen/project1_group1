@@ -7,3 +7,18 @@ services:
     volumes:
       - ./webapp:/usr/src/app
       - ./static:/usr/src/static
+
+  pg:
+        image: postgres
+        environment:
+          - POSTGRES_USER=postgres
+          - POSTGRES_PASSWORD=pw
+          - POSTGRES_DB=athena
+        ports:
+          - "5436:5432"
+
+  cass:
+        image: cassandra
+        environment:
+          - CASSANDRA_CLUSTER_NAME=local_cluster
+          - CASSANDRA_DC=local_dc
