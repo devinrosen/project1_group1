@@ -83,11 +83,23 @@ WSGI_APPLICATION = "athena.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+DB_NAME = os.environ.get('POSTGRES_DB')
+DB_HOST = os.environ.get('POSTGRES_HOST')
+DB_USER = os.environ.get('POSTGRES_USER')
+DB_PASSWORD = os.environ.get('POSTGRES_PASSWORD')
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': DB_NAME,
+        'HOST': DB_HOST,
+        'USER': DB_USER,
+        'PASSWORD': DB_PASSWORD,
+        'CONN_MAX_AGE': None,
+        'DISABLE_SERVER_SIDE_CURSORS': True,
+        'OPTIONS': {
+            'client_encoding': 'UTF8'
+        }
     }
 }
 
