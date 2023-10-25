@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv("SECRET_KEY", "django-insecure-1@*wy8+cu7=l9)vhayf=q!-e+w-xe+ua+9qh3v73nxmg!xtau0") # NOQA
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -44,9 +44,9 @@ INSTALLED_APPS = [
 ]
 
 REST_FRAMEWORK = {
-    'DEFAULT_RENDERER_CLASSES': (
-        'rest_framework.renderers.BrowsableAPIRenderer',
-        'rest_framework.renderers.JSONRenderer',
+    "DEFAULT_RENDERER_CLASSES": (
+        "rest_framework.renderers.BrowsableAPIRenderer",
+        "rest_framework.renderers.JSONRenderer",
     ),
 }
 
@@ -65,7 +65,7 @@ ROOT_URLCONF = "athena.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR, 'templates')],
+        "DIRS": [os.path.join(BASE_DIR, "templates")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -83,22 +83,41 @@ WSGI_APPLICATION = "athena.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-DB_NAME = os.environ.get('POSTGRES_DB')
-DB_HOST = os.environ.get('POSTGRES_HOST')
-DB_USER = os.environ.get('POSTGRES_USER')
-DB_PASSWORD = os.environ.get('POSTGRES_PASSWORD')
+PG_HOST = os.environ.get("POSTGRES_HOST")
+PG_NAME = os.environ.get("POSTGRES_DB")
+PG_USER = os.environ.get("POSTGRES_USER")
+PG_PASSWORD = os.environ.get("POSTGRES_PASSWORD")
+
+CASS_HOST = os.environ.get("CASSANDRA_HOST")
+CASS_PORT = os.environ.get("CASSANDRA_PORT")
 
 DATABASES = {
     "default": {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': DB_NAME,
-        'HOST': DB_HOST,
-        'USER': DB_USER,
-        'PASSWORD': DB_PASSWORD,
-        'CONN_MAX_AGE': None,
-        'DISABLE_SERVER_SIDE_CURSORS': True,
-        'OPTIONS': {
-            'client_encoding': 'UTF8'
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": PG_NAME,
+        "HOST": PG_HOST,
+        "USER": PG_USER,
+        "PASSWORD": PG_PASSWORD,
+        "CONN_MAX_AGE": None,
+        "DISABLE_SERVER_SIDE_CURSORS": True,
+        "OPTIONS": {
+            "client_encoding": "UTF8"
+        }
+    },
+    "cassandra": {
+        "ENGINE": "django_cassandra_engine",
+        "NAME": "db",
+        "HOST": CASS_HOST,
+        "USER": "cassandra",
+        "PASSWORD": "cassandra",
+        "OPTIONS": {
+            "connection": {
+                "retry_connect": True,
+                "port": CASS_PORT,
+                "protocol_version": 4,
+                "auth_provider": None,
+                "lazy_connect": True,
+            }
         }
     }
 }

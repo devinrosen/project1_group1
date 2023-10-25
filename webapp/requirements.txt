@@ -1,4 +1,6 @@
+cassandra-driver==3.28.0
 Django==4.2.6
+django-cassandra-engine==1.8.0
 djangorestframework==3.14.0
 fredapi==0.5.1
 hvplot==0.9.0
