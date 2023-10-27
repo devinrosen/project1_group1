@@ -59,4 +59,33 @@ In 1980, as Interest rates were on the rise, they had a marginal positive effect
 
 ## Residential Real Estate Value Compared to Economic Factors
 
-## Residential Real Estate Returns Compared to S&P 500 and XLRE
+
+
+# PART 2 - Ivestment Analysis: Housing Price Index(HPI) vs S&P 500 vs The Real Estate Select Sector SPDR Fund (XLRE)
+
+## a.Residential Real Estate Returns Compared to S&P 500
+We started the investment analysis by importing the yfinance (Yahoo Finance), python libray to pull in historical data. The yfinance tool only pulled in data back to 1985 and for that reason we narrowerd our investment scope for The HPI to go back to only the start of 1985 as well. Secondly, since the HPI is a quarterly report we pulled in quarterly S&P 500 data, rather than daily or monthly records. Once we had our time and frequency variables in equilabrium we focused on the closing data for both the S&P 500 and HPI and then calculated and plotted the returns for HPI and S&P both individually and agaist eachother. 
+![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/S&P500_Quarterly_Returns.png?raw=true)
+
+![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/HPI_Quarterly_Returns.png?raw=true)
+
+![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/S&P500_and_HPI_Returns.png?raw=true)
+
+#### Analysis Results
+
+## b.Residential Real Estate Returns Compared to XLRE
+We then pivoted to compare The HPI to the he Real Estate Select Sector SPDR Fund (XLRE). The XLRE fund is a fund that was created towards the end 0f 2015 with their first quarterly report being 10/1/2015. This fund is a cumulation of securities of companies in the real estate industy, real estate management and development compnaies and REIT's. For this comparison we re-sliced the HPI data to also start with first data entry being that of 10/01/2015. We then repeated the process from the analysis above by fetching the quarterly closing dates for both HPI and XLRE and calculated and plotted returns for each asset individually & and against eachother.
+
+![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/XLRE_Quarterly_Reports.png?raw=true)
+
+![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/XLRE_HPI_Returns.png?raw=true)
+
+
+## c.Residential Real Estate Returns Compared to XLRE & S&P500
+Lastly, we then re-sliced the S&P 500 data to also have a data starting point of 10/01/2015. After combining all 3 asset class returns into a single dataframe we were able to plot all 3 against eachtother for an easy-viewing, investment analysis of returns between the 3 assets. 
+![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/XLRE_HPI_SP500_Returns.png?raw=true)
+
+
+
+
+#### Analysis Results
