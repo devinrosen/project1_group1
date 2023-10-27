@@ -17,6 +17,30 @@ Our goal is to determine how the value of residential real estate relates to sup
     - [yfinance](https://github.com/ranaroussi/yfinance)
         - To install yfinance: `pip install yfinance`
 
+## Residential Real Estate Value Compared to Inflation
+In this section, we are comparing between Housing Price Index and Inflation. 
+![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/Inflation%20and%20HPI.png?raw=true)
+
+![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/Inflation%20and%20HPI%20Analysis.png?raw=ture)
+
+## Residential Real Estate Value comapred to Federal Funds Effective Rate
+![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/Interest%20Rate%20and%20HPI.png?raw=true)
+
+![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/Interest%20Rate%20and%20HPI%20Analysis.png?raw=true)
+
+
+## Residential Real Estate Value compared to Monthly Supply of New Houses
+
+![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/Monthly%20Supply%20New%20House%20and%20HPI.png?raw=true)
+
+![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/House%20Monthly%20Supply%20and%20HPI%20Analysis.png?raw=true)
+
+
+## Combined Residential Real Estate Value, Inflation, Fred Funds Effective Rate, Monthly Supply of New Houses
+
+![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/Combined%20Dataframe.png?raw=true)
+
+![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/Correlation.png?raw=true)
 ## Residential Real Estate Value Compared to Economic Factors
 
 ## Residential Real Estate Returns Compared to S&P 500 and XLRE
