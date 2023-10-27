@@ -18,18 +18,20 @@ Our goal is to determine how the value of residential real estate relates to sup
         - To install yfinance: `pip install yfinance`
 
 ## Residential Real Estate Value Compared to Inflation
-In this section, we are comparing between Housing Price Index and Inflation. 
+In this section, we are conducting a comparison between the Housing Price Index and Inflation. Over time, a noticeable similarity emerges as both the Housing Price Index and Inflation follow a parallel trend until the year 2010.
 ![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/Inflation%20and%20HPI.png?raw=true)
 
 ![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/Inflation%20and%20HPI%20Analysis.png?raw=ture)
 
 ## Residential Real Estate Value comapred to Federal Funds Effective Rate
+In this particular scenario, we are examining the relationship between the Housing Price Index and Interest rates. During the initial years, as Interest rates were on the rise, the Housing Price Index remained relatively stable with minimal fluctuations. However, post-2001, a notable trend emerges wherein the Housing Price Index undergoes significant fluctuations over time.
 ![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/Interest%20Rate%20and%20HPI.png?raw=true)
 
 ![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/Interest%20Rate%20and%20HPI%20Analysis.png?raw=true)
 
 
 ## Residential Real Estate Value compared to Monthly Supply of New Houses
+Regarding the Supply of New Houses and the Housing Price Index, we observe that the Monthly supply of New Houses has consistently exceeded the Housing Price Index. However, in the period following 2000, the Housing Price Index has shown variations while the Monthly Supply of New Houses has maintained a steadier pace.
 
 ![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/Monthly%20Supply%20New%20House%20and%20HPI.png?raw=true)
 
@@ -37,7 +39,7 @@ In this section, we are comparing between Housing Price Index and Inflation.
 
 
 ## Combined Residential Real Estate Value, Inflation, Fred Funds Effective Rate, Monthly Supply of New Houses
-
+In this analysis, we are examining the Housing Price Index, Interest Rate, and Monthly Supply of New Houses. From the graphical data, a notable pattern emerges. In 1981, during a period of high Interest rates, we observe low Inflation, a corresponding low Housing Price Index, and a rising Monthly Supply of New Houses. Conversely, in 2010, when Interest rates were low, we see the highest Monthly Supply of New Houses, low Inflation, and a declining Housing Price Index.
 ![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/Combined%20Dataframe.png?raw=true)
 
 ![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/Correlation.png?raw=true)
