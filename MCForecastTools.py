@@ -129,7 +129,7 @@ class MCSimulation:
             self.calc_cumulative_return()
             
         # Use Pandas plot function to plot the return data
-        plot_title = f"{self.nSim} Simulations of Cumulative Portfolio Return Trajectories Over the Next {self.nTrading} Trading Days."
+        plot_title = f"{self.nSim} Simulations of Cumulative Portfolio Return Trajectories Over the Next {self.nTrading} Trading Quarters."
         return self.simulated_return.plot(legend=None,title=plot_title)
     
     def plot_distribution(self):

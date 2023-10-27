@@ -56,6 +56,7 @@ In this analysis, we are examining the Housing Price Index, Interest Rate, and M
 ##### How do cycles in Inflation, Interest rates and housing inventories affect the costs of residential real estate since 1980?
 In 1980, as Interest rates were on the rise, they had a marginal positive effect on the Housing Price Index, Inflation, and Monthly Supply. However, in 1981, when Interest rates reached their peak, a negative impact was observed on Inflation and the Housing Price Index, although Monthly Supply continued to increase at a slower rate. Fast forward to 2010, with Interest rates at their lowest, Monthly Supply reached its peak, while both the Housing Price Index and Inflation experienced a decline.
 
+
 ## Residential Real Estate Value Compared to Economic Factors
 
 ## Residential Real Estate Returns Compared to S&P 500 and XLRE
