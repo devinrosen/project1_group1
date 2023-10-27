@@ -43,6 +43,17 @@ In this analysis, we are examining the Housing Price Index, Interest Rate, and M
 ![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/Combined%20Dataframe.png?raw=true)
 
 ![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/Correlation.png?raw=true)
+
+### Correlation Analysis
+
+According to the correlation heatmap graph:
+•	HPI and Inflation show a positive correlation, indicating that an increase in HPI is associated with an increase in Inflation.
+•	Monthly Supply and Interest rate display a positive correlation, meaning that when Monthly Supply increases, Interest rates also tend to increase.
+•	Monthly Supply and Inflation demonstrate a negative correlation, explaining that an increase in Monthly Supply is associated to a decrease in Inflation.
+•	Monthly Supply and HPI show a negative correlation, suggesting that as Monthly Supply increases, HPI tends to decrease.
+•	Interest Rate and Inflation reveal a negative correlation, indicating that an increase in Interest Rate is linked to a decrease in Inflation.
+•	Interest rate and HPI have a negative correlation, indicating that when Interest rates increase, HPI tends to decrease.
+
 ## Residential Real Estate Value Compared to Economic Factors
 
 ## Residential Real Estate Returns Compared to S&P 500 and XLRE
