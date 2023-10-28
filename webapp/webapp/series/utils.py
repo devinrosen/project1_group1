@@ -1,13 +1,26 @@
+import logging
+
 import yfinance as yp
 
 from .models import Series
 
-def save_history(symbol):
+logging.basicConfig()
+log = logging.getLogger(__name__)
+
+
+def update_history(symbol):
     ticker = yp.Ticker(symbol)
     history = ticker.history()
     for index, row in history.iterrows():
-       log.critical(f"{index} {row.loc['Close']}")
-       series_item = Series(
-           
-       )
-       series_item.save()
+        series_item = Series(
+            date=index.date(),
+            symbol=symbol,
+            close=row.loc["Close"],
+            open=row.loc["Open"],
+            high=row.loc["High"],
+            low=row.loc["Low"],
+            volume=row.loc["Volume"],
+            dividends=row.loc["Dividends"],
+            stock_splits=row.loc["Stock Splits"],
+        )
+        series_item.save()
