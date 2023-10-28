@@ -63,7 +63,7 @@ In 1980, as interest rates were on the rise, they had a marginal positive effect
 # PART 2 - Investment Analysis: Housing Price Index(HPI) vs S&P 500 vs The Real Estate Select Sector SPDR Fund (XLRE)
 
 ## a.Residential Real Estate Returns Compared to S&P 500
-We started the investment analysis by importing the yfinance (Yahoo Finance), python library to pull in historical data. The yfinance tool only pulled in data back to 1985 and for that reason we narrowed our investment scope for The HPI to go back to only the start of 1985 as well. Secondly, since the HPI is a quarterly report we pulled in quarterly S&P 500 data, rather than daily or monthly records. Once we had our time and frequency variables in equilibrium we focused on the closing data for both the S&P 500 and HPI and then calculated and plotted the returns for HPI and S&P both individually and against each other. 
+We started the investment analysis by importing the yfinance (Yahoo Finance), python library to pull in historical data. The yfinance tool only pulled in data back to 1985 and for that reason we narrowed our investment scope for the HPI to go back to only the start of 1985 as well. Secondly, since the HPI is a quarterly report we pulled in quarterly S&P 500 data, rather than daily or monthly records. Once we had our time and frequency variables in equilibrium we focused on the closing data for both the S&P 500 and HPI and then calculated and plotted the returns for HPI and S&P both individually and against each other.
 ![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/S&P500_Quarterly_Returns.png?raw=true)
 
 ![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/HPI_Quarterly_Returns.png?raw=true)
@@ -73,7 +73,7 @@ We started the investment analysis by importing the yfinance (Yahoo Finance), py
 #### Analysis Results
 
 ## b.Residential Real Estate Returns Compared to XLRE
-We then pivoted to compare The HPI to the he Real Estate Select Sector SPDR Fund (XLRE). The XLRE fund is a fund that was created towards the end 0f 2015 with their first quarterly report being 10/1/2015. This fund is a cumulation of securities of companies in the real estate industry, real estate management and development companies and REIT's. For this comparison we re-sliced the HPI data to also start with first data entry being that of 10/01/2015. We then repeated the process from the analysis above by fetching the quarterly closing dates for both HPI and XLRE and calculated and plotted returns for each asset individually and against each other.
+We then pivoted to compare the HPI to the he Real Estate Select Sector SPDR Fund (XLRE). The XLRE fund is a fund that was created towards the end 0f 2015 with their first quarterly report being 10/1/2015. This fund is a cumulation of securities of companies in the real estate industry, real estate management and development companies and REIT's. For this comparison we re-sliced the HPI data to also start with first data entry being that of 10/01/2015. We then repeated the process from the analysis above by fetching the quarterly closing dates for both HPI and XLRE and calculated and plotted returns for each asset individually and against each other.
 
 ![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/XLRE_Quarterly_Reports.png?raw=true)
 
