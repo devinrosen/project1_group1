@@ -45,7 +45,7 @@ In this analysis, we are examining the Housing Price Index, Interest Rate, and M
 ![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/Correlation.png?raw=true)
 
 ##### Correlation Analysis
-*	HPI and Inflation show a positive correlation, indicating that an increase in HPI is associated with an increase in Inflation.
+*	HPI and Inflation show a positive correlation, indicating that an increase in Inflation is associated with an increase in HPI and vice versa.
 *	Monthly Supply and Interest rate display a positive correlation, meaning that when Monthly Supply increases, Interest rates also tend to increase.
 *	Monthly Supply and Inflation demonstrate a negative correlation, explaining that an increase in Monthly Supply is associated to a decrease in Inflation.
 *	Monthly Supply and HPI show a negative correlation, suggesting that as Monthly Supply increases, HPI tends to decrease.
@@ -55,6 +55,8 @@ In this analysis, we are examining the Housing Price Index, Interest Rate, and M
 
 ##### How do cycles in Inflation, Interest rates and housing inventories affect the costs of residential real estate since 1980?
 In 1980, as Interest rates were on the rise, they had a marginal positive effect on the Housing Price Index, Inflation, and Monthly Supply. However, in 1981, when Interest rates reached their peak, a negative impact was observed on Inflation and the Housing Price Index, although Monthly Supply continued to increase at a slower rate. Fast forward to 2010, with Interest rates at their lowest, Monthly Supply reached its peak, while both the Housing Price Index and Inflation experienced a decline.
+
+In our view, when inflation is on the rise and Monthly Supply is low, home value tend to be high. This makes it a good time to sell residential real estate. On the other hand, when inflation is low, and Monthly Supply is high, it's a good time to consider buying residential real estate.
 
 
 ## Residential Real Estate Value Compared to Economic Factors
