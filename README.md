@@ -30,7 +30,7 @@ In this particular scenario, we are examining the relationship between the Housi
 
 
 ## Residential Real Estate Value compared to Monthly Supply of New Houses
-Regarding the supply of new houses and the housing price Index, we observe that the monthly supply of new houses has consistently exceeded the housing Price Index. However, in the period following 2000, the Housing Price Index has shown variations while the monthly supply of new houses has maintained a steadier pace.
+Regarding the supply of new houses and the Housing Price Index, we observe that the monthly supply of new houses has consistently exceeded the Housing Price Index. However, in the period following 2000, the Housing Price Index has shown variations while the monthly supply of new houses has maintained a steadier pace.
 
 ![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/Monthly%20Supply%20New%20House%20and%20HPI.png?raw=true)
 
