@@ -1,6 +1,7 @@
 from data_sources.models import Company
 from data_sources.utils import DATA_SOURCE_FUNCTION
 
+
 def validate_symbol(symbol):
     source = "yahoo"
     try:

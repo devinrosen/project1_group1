@@ -18,6 +18,7 @@ def yahoo(series):
     serializer = serializers.CompanySerializer(data=series_data.info)
     serializer.is_valid(raise_exception=True)
     serializer.save()
+
     return series_data.info
 
 

@@ -10,21 +10,12 @@ class CompanyOfficerSerializer(serializers.ModelSerializer):
 
 
 class CompanySerializer(serializers.ModelSerializer):
-    companyOfficers = CompanyOfficerSerializer(many=True)
-
     class Meta:
         model = models.Company
         fields = '__all__'
     
     def create(self, validated_data):
-        company_officers = validated_data.pop('companyOfficers')
-        company = models.Company.objects.create(**validated_data)
-        for company_officer in company_officers:
-            models.CompanyOfficer.objects.create(
-                company=company,
-                **company_officer,
-            )
-        return company
+        return models.Company.objects.create(**validated_data)
 
 
 class CompanyTickerSerializer(serializers.ModelSerializer):

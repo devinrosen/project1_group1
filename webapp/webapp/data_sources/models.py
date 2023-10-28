@@ -157,4 +157,3 @@ class Company(models.Model):
     operatingMargins = models.FloatField(null=True)
     financialCurrency = models.CharField(max_length=255, null=True)
     trailingPegRatio = models.FloatField(null=True)
-    companyOfficers = models.ManyToManyField(CompanyOfficer)
