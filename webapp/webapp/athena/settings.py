@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "athena",
     "data_sources",
+    "portfolios",
 ]
 
 REST_FRAMEWORK = {
