@@ -22,4 +22,5 @@ urlpatterns = [
     path("health/", views.HealthCheck.as_view(), name='health check'),
     path("api/sources/", include("data_sources.urls")),
     path("api/portfolios/", include("portfolios.urls")),
+    path("api/series/", include("series.urls")),
 ]

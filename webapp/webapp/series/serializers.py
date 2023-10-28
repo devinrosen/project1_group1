@@ -1,0 +1,17 @@
+import logging
+
+from rest_framework import serializers
+
+logging.basicConfig()
+log = logging.getLogger(__name__)
+
+
+class SeriesSerializer(serializers.Serializer):
+    date = serializers.DateField()
+    open = serializers.FloatField()
+    high = serializers.FloatField()
+    low = serializers.FloatField()
+    close = serializers.FloatField()
+    volume = serializers.FloatField()
+    dividends = serializers.FloatField()
+    stockSplits = serializers.FloatField()

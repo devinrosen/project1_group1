@@ -39,9 +39,11 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
+    "django_cassandra_engine",
     "athena",
     "data_sources",
     "portfolios",
+    "series",
 ]
 
 REST_FRAMEWORK = {
@@ -90,7 +92,8 @@ PG_USER = os.environ.get("POSTGRES_USER")
 PG_PASSWORD = os.environ.get("POSTGRES_PASSWORD")
 
 CASS_HOST = os.environ.get("CASSANDRA_HOST")
-CASS_PORT = os.environ.get("CASSANDRA_PORT")
+CASS_CLUSTER = os.environ.get("CASSANDRA_CLUSTER_NAME")
+
 
 DATABASES = {
     "default": {
@@ -107,16 +110,15 @@ DATABASES = {
     },
     "cassandra": {
         "ENGINE": "django_cassandra_engine",
-        "NAME": "db",
+        "NAME": CASS_CLUSTER,
         "HOST": CASS_HOST,
-        "USER": "cassandra",
-        "PASSWORD": "cassandra",
         "OPTIONS": {
+            "replication": {
+                "strategy_class": "SimpleStrategy",
+                "replication_factor": 1,
+            },
             "connection": {
                 "retry_connect": True,
-                "port": CASS_PORT,
-                "protocol_version": 4,
-                "auth_provider": None,
                 "lazy_connect": True,
             }
         }

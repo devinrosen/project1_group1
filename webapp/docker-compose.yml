@@ -7,7 +7,6 @@ services:
       - POSTGRES_PASSWORD=pw
       - POSTGRES_DB=athena
       - CASSANDRA_HOST=cass
-      - CASSANDRA_PORT=9042
       - CASSANDRA_CLUSTER_NAME=local_cluster
       - CASSANDRA_DC=local_dc
     ports:
