@@ -98,7 +98,7 @@ class ExplorePortfolio(generics.RetrieveUpdateDestroyAPIView):
 
         # Cumulative Daily Returns
         x = list(portfolio_df.index.array)
-        plot = figure(x_range=x, title="Cumulative Daily Returns")
+        plot = figure(x_range=x, title=f"Cumulative Daily Returns from {x[0]} to {x[-1]}")
         for symbol in symbols:
             y = list(portfolio_df[f"{symbol} cumulative returns"])
             plot.line(
