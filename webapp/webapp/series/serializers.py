@@ -7,6 +7,11 @@ log = logging.getLogger(__name__)
 
 PERIOD_CHOICES = {
     "1mo": "1mo",
+    "3mo": "3mo",
+    "6mo": "6mo",
+    "1yr": "1yr",
+    "2yr": "2yr",
+    "5yr": "5yr",
     "max": "max",
 }
 

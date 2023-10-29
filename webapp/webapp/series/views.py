@@ -33,6 +33,6 @@ class UpdateSeries(generics.UpdateAPIView):
 
     def update(self, request, *args, **kwargs):
         series = kwargs.get("series")
-        period = kwargs.get("period")
+        period = request.data.get("period")
         update_history(series, period)
         return Response({"series": series}, status.HTTP_201_CREATED)
