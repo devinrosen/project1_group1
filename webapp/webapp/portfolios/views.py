@@ -2,6 +2,7 @@ import logging
 
 import pandas as pd
 
+from bokeh.palettes import Category20b
 from bokeh.plotting import figure
 from bokeh.embed import components
 from django.shortcuts import render
@@ -55,7 +56,7 @@ class ExplorePortfolio(generics.RetrieveUpdateDestroyAPIView):
         for k, v in portfolio.holdings.items():
             symbols.append(k)
             weights.append(v)
-        plot = figure(frame_width=400, frame_height=400, x_range=symbols)
+        plot = figure(frame_width=400, frame_height=400, x_range=symbols, title="Portfolio Distribution")
         plot.vbar(x=symbols, top=weights, width=0.5)
         distribution_script, distribution_div = components(plot)
         kwargs["plots"]["distribution"]["script"] = distribution_script
@@ -73,20 +74,37 @@ class ExplorePortfolio(generics.RetrieveUpdateDestroyAPIView):
                     "date",
                     "close",
                     "daily_returns"
-                )
+                ).order_by("date")
                 for data in series_data:
-                    date.append(data[0])
+                    date.append(str(data[0]))
                     close.append(data[1])
                     returns.append(data[2])
                 dfs[symbol] = pd.DataFrame(
                     {f"{symbol} close": close, f"{symbol} returns": returns},
-                    index=date
+                    index=date,
                 )
             except Exception:
                 log.exception(f"Unable to get series data for {symbol}")
 
         portfolio_df = pd.concat(dfs.values(), axis=1, join="inner")
-        log.exception(f"{portfolio_df.head()}")
+        for symbol in symbols:
+            portfolio_df[f"{symbol} cumulative returns"] = portfolio_df[f"{symbol} returns"].add(1).cumprod().sub(1)
         # Create the data frame
+
+        # Cumulative Daily Returns
+        x = list(portfolio_df.index.array)
+        plot = figure(x_range=x, title="Cumulative Daily Returns")
+        for symbol in symbols:
+            y = list(portfolio_df[f"{symbol} cumulative returns"])
+            plot.line(
+                x=x,
+                y=y,
+                legend_label=symbol,
+                color=Category20b[len(symbols)][symbols.index(symbol)],
+            )
+        returns_script, returns_div = components(plot)
+        kwargs["plots"]["returns"]["script"] = returns_script
+        kwargs["plots"]["returns"]["div"] = returns_div
+        # Cumulative Daily Returns
 
         return render(request, 'base.html', context=kwargs)
