@@ -16,6 +16,7 @@ class Series(DjangoCassandraModel):
     volume = columns.Float()
     dividends = columns.Float()
     stock_splits = columns.Float()
+    daily_returns = columns.Float()
 
     class Meta:
         get_pk_field = 'date'
