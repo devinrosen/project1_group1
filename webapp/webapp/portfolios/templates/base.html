@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <link href="http://cdn.pydata.org/bokeh/release/bokeh-3.3.0.min.css
+         " rel="stylesheet" type=”text/css” >
+         <link href="http://cdn.pydata.org/bokeh/release/bokeh-widgets-3.3.0.min.css" 
+         rel="stylesheet" type=”text/css” >
+    </head>
+    <body>
+        <h1>Portfolio: {{portfolio.name}}</h1>
+        {% if portfolio.description %}<em>{{portfolio.description}}</em>{% endif %}
+        <h2>Distribution</h2>
+        {{plots.distribution.div| safe}}
+        <h2>Cumulative Daily Returns</h2>
+        {{plots.returns.div| safe}}
+        <h2>Correlation</h2>
+        {{plots.correlation.div| safe}}
+    </body>
+    <script src="https://cdn.bokeh.org/bokeh/release/bokeh-3.3.0.min.js"></script>
+    <script src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.3.0.min.js"></script>
+    <script src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-3.3.0.min.js"></script>
+    <script src="https://cdn.bokeh.org/bokeh/release/bokeh-api-3.3.0.min.js"></script>
+    {{plots.distribution.script| safe}}
+    {{plots.returns.script| safe}}
+    {{plots.correlation.script| safe}}
+</html>
