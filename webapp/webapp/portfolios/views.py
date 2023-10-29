@@ -57,7 +57,12 @@ class ExplorePortfolio(generics.RetrieveUpdateDestroyAPIView):
             symbols.append(k)
             weights.append(v)
         plot = figure(frame_width=400, frame_height=400, x_range=symbols, title="Portfolio Distribution")
-        plot.vbar(x=symbols, top=weights, width=0.5)
+        plot.vbar(
+            x=symbols,
+            top=weights,
+            width=0.5,
+            color=Category20b[len(symbols)],
+        )
         distribution_script, distribution_div = components(plot)
         kwargs["plots"]["distribution"]["script"] = distribution_script
         kwargs["plots"]["distribution"]["div"] = distribution_div
