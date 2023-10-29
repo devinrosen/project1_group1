@@ -22,7 +22,7 @@ class Series(generics.ListAPIView):
         symbol = self.kwargs.get("series")
         if not symbol:
             raise NotFound("Missing Symbol")
-        return self.queryset.filter(symbol=symbol)
+        return self.queryset.filter(symbol=symbol).limit(50)
 
 
 class UpdateSeries(generics.UpdateAPIView):
