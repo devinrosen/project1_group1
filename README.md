@@ -77,6 +77,7 @@ We then pivoted to compare The HPI to the he Real Estate Select Sector SPDR Fund
 
 ## b. Sharpe Ratios and Correlation of the Rteurns between HPI, XLRE & S&P 500
 After merging all 3 data sets into one single dataframe we then calculated the standard deviation of all 3 assets so that we could in turn calculate and plot the Sharpe Ratios, which is a measure of risk-adjusted return on investment. For the Risk Free Rate on the standard deviation we used The 13-Week T-bill Treasury Index (^IRX). Afterwards we also plotted the correlation between the HPI, XLRE & SP 500 to analyze how each 3 move with eachother. 
+
 ![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/Std_Dev.png?raw=true)
 
 ![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/Sharpe.png?raw=true)
@@ -105,7 +106,7 @@ After conducting our investment return analysis on The HPI, XLRE & S&P 500, we t
 ###### XLRE Scenario 
 ![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/MC_XLRE.png?raw=true)
 
-![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/Dist_XLRE.png?raw=true)
+![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/DIST_XLRE.png?raw=true)
 
 ###### HPI Scenario 
 ![alt text](https://github.com/devinrosen/project1_group1/blob/main/images/MC_HPI.png?raw=true)
