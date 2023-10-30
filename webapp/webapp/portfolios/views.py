@@ -56,12 +56,16 @@ class ExplorePortfolio(generics.RetrieveUpdateDestroyAPIView):
         for k, v in portfolio.holdings.items():
             symbols.append(k)
             weights.append(v)
+
+        # Get the palette to be used
+        palette = Category20b.get(len(symbols)) or list(Category20b.values())[-1]
+
         plot = figure(frame_width=400, frame_height=400, x_range=symbols, title="Portfolio Distribution")
         plot.vbar(
             x=symbols,
             top=weights,
             width=0.5,
-            color=Category20b[len(symbols)],
+            color=palette,
         )
         distribution_script, distribution_div = components(plot)
         kwargs["plots"]["distribution"]["script"] = distribution_script
@@ -98,14 +102,17 @@ class ExplorePortfolio(generics.RetrieveUpdateDestroyAPIView):
 
         # Cumulative Daily Returns
         x = list(portfolio_df.index.array)
-        plot = figure(x_range=x, title=f"Cumulative Daily Returns from {x[0]} to {x[-1]}")
+        title = "Cumulative Daily Returns"
+        if len(x) > 2:
+            title += f" from {x[0]} to {x[-1]}"
+        plot = figure(x_range=x, title=title)
         for symbol in symbols:
             y = list(portfolio_df[f"{symbol} cumulative returns"])
             plot.line(
                 x=x,
                 y=y,
                 legend_label=symbol,
-                color=Category20b[len(symbols)][symbols.index(symbol)],
+                color=palette[symbols.index(symbol)],
             )
         returns_script, returns_div = components(plot)
         kwargs["plots"]["returns"]["script"] = returns_script
