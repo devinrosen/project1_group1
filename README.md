@@ -63,7 +63,7 @@ In our view, when inflation is on the rise and Monthly Supply is low, home value
 
 
 
-# PART 2 - Ivestment Analysis: Housing Price Index(HPI) vs S&P 500 vs The Real Estate Select Sector SPDR Fund (XLRE)
+# PART 2 - Investment Analysis: Housing Price Index(HPI) vs S&P 500 vs The Real Estate Select Sector SPDR Fund (XLRE)
 
 ## a. Residential Real Estate Returns Compared to S&P 500 & XLRE
 We started the investment analysis by importing the yfinance (Yahoo Finance), python library to pull in historical data. The yfinance tool only pulled in data back to 1985 and for that reason we narrowed our investment scope for The HPI to go back to only the start of 1985 as well. Secondly, since the HPI is a quarterly report we pulled in quarterly S&P 500 data, rather than daily or monthly records.
@@ -126,3 +126,6 @@ After conducting our investment return analysis on The HPI, XLRE & S&P 500, we t
 After running our investment analysis, the revelation seems to be that residential real estate is a very safe and secure investment, which some would argue is the best investment on Earth. This is a result of extremely low price swings, in either direction, leading to a slow and steady climb in prices that can lead to generating wealth for one's self. This is shown in the astonishing 18 point sharpe ration and our Monte Carlo simulation showing 0 out of the 500 simulations losing money over a 30 year horizon, as compared with the XLRE & S&P500 simulations that had multiple scenarios losing money or no making any returns over the same 30 year horizon. 
 
 As an investor, one should absolutely include residential homes into their total investment portfolio to, not only maximize, their returns and wealth, but also help stabilize the portfolio by diversifying into residential real estate and combating the negative returns that can happen in the securities market, as shown in our investment correlation analysis.
+
+# PART 3 - Portfolio Management Tool
+Details about the architecture, design choices, and running the web app can be found at [Project Code Name Athena](https://github.com/devinrosen/project1_group1/blob/main/webapp/README.md)
